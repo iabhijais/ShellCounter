@@ -136,7 +136,7 @@ export default function Home() {
             <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tighter text-shadow-lg">
               ShellShock Counter
             </h1>
-            <p className="text-sm text-muted-foreground mt-1 text-right pr-2">by hawkkeyed</p>
+            <p className="text-sm text-muted-foreground mt-1 text-right pr-2">by iabhijais</p>
             <RoundTracker current={currentRound} total={totalShells} />
           </div>
 
@@ -191,12 +191,6 @@ export default function Home() {
                 New Game
             </Button>
           </div>
-        </div>
-
-         <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0">
-          <p className="text-8xl font-black text-white/5 -rotate-12 select-none">
-            Abhay k bap ki app hai ye
-          </p>
         </div>
       </main>
 
