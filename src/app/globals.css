@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 232 59% 48%; /* Deep Indigo */
+    --foreground: 210 40% 98%;
+
+    --card: 232 40% 58%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 232 59% 20%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 232 59% 48%;
+
+    --secondary: 174 100% 29%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 232 59% 38%;
+    --muted-foreground: 232 40% 80%;
+
+    --accent: 174 100% 29%; /* Teal */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 232 59% 55%;
+    --input: 232 59% 55%;
+    --ring: 174 90% 45%;
+    
+    --radius: 0.8rem;
+  }
+
+  .dark {
+    --background: 232 59% 10%;
+    --foreground: 210 40% 98%;
+    --card: 232 59% 15%;
+    --card-foreground: 210 40% 98%;
+    --popover: 232 59% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 232 59% 20%;
+    --secondary: 174 100% 29%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 232 59% 20%;
+    --muted-foreground: 210 40% 60%;
+    --accent: 174 100% 29%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 232 59% 25%;
+    --input: 232 59% 25%;
+    --ring: 174 90% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .animate-flip-in {
+    animation: flip-in 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  @keyframes flip-in {
+    from {
+      transform: translateY(-0.5em) rotateX(90deg);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0) rotateX(0deg);
+      opacity: 1;
+    }
+  }
+
+  @keyframes sparkle {
+    0% {
+      opacity: 0;
+      transform: scale(0.5) rotate(0deg);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2) rotate(180deg);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(2) rotate(360deg);
+    }
+  }
+
+  @keyframes confetti-fall {
+    0% {
+      transform: translateY(0) rotateZ(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(110vh) rotateZ(720deg);
+      opacity: 0;
+    }
+  }
+}
